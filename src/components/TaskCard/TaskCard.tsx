@@ -12,24 +12,18 @@ const TaskCard = () => {
         <h1 className="text-lg font-semibold">Title</h1>
         <div className="mt-1 text-sm line-clamp-3">Task Description</div>
       </header>
-      <div>
-        <div className="text-sm">
-          2024-11-30
-          <div className="flex justify-between items-center">
-            <div
-              className={`mt-1 text-sm px-2 py-1 w-24 text-center text-white
+      <div className="text-sm">
+        2024-11-30
+        <div className="flex justify-between items-center">
+          <div
+            className={`mt-1 text-sm px-2 py-1 w-24 text-center text-white
             rounded-full shadow-sm ${true ? "bg-green-500" : "bg-red-500"}`}
-            >
-              {true ? "Completed" : "Incomplete"}
-            </div>
-            <div>
-              <div>
-                <TaskEditButton id="1" />
-              </div>
-              <div>
-                <TaskDeleteButton id="1" />
-              </div>
-            </div>
+          >
+            {true ? "Completed" : "Incomplete"}
+          </div>
+          <div className="flex gap-4">
+            <TaskEditButton id="1" />
+            <TaskDeleteButton id="1" />
           </div>
         </div>
       </div>
